@@ -1,4 +1,4 @@
-FROM docker.io/tiredofit/alpine:3.16
+FROM docker.io/denisolek/alpine
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ENV MARIADB_VERSION=10.8.5 \
@@ -8,8 +8,8 @@ ENV MARIADB_VERSION=10.8.5 \
     ZABBIX_AGENT_TYPE=classic \
     CONTAINER_ENABLE_MESSAGING=FALSE \
     CONTAINER_ENABLE_SCHEDULING=TRUE \
-    IMAGE_NAME="tiredofit/mariadb:10.8" \
-    IMAGE_REPO_URL="https://github.com/tiredofit/docker-mariadb/"
+    IMAGE_NAME="denisolek/mariadb" \
+    IMAGE_REPO_URL="https://github.com/denisolek/docker-mariadb/"
 
 ### Install Required Dependencies
 RUN export CPU=`cat /proc/cpuinfo | grep -c processor` && \
